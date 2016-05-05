@@ -1,7 +1,7 @@
 {
   "files": [
     {
-      "pattern": "Artifactory*.zip",
+      "pattern": "workspace@script/Artifactory*.zip",
       "target": "libs-snapshot-local/"
     }
   ]
