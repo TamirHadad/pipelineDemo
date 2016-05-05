@@ -1,7 +1,7 @@
 {
   "files": [
     {
-      "pattern": "workspace@script/Bazinga/Pipeline/ArtifactoryPipeline.zip",
+      "pattern": "Bazinga/Pipeline/ArtifactoryPipeline.zip",
       "target": "libs-release-local/JfrogPipeline/"
     }
   ]
