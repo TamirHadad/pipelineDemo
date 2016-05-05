@@ -20,7 +20,7 @@ node {
         }
      }
      
-    def warmUpJson = readFile 'warmup.json'   
+    def warmUpJson = readFile './warmup.json'   
         rtUpload(artifactoryServer: server, json: warmUpJson)
     
     def resolveJson = readFile 'resolve.json' 
