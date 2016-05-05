@@ -20,15 +20,15 @@ node {
         }
      }
      
-    def warmUpJson = readFile 'workspace@script/warmup.json'   
+    def warmUpJson = readFile 'warmup.json'   
         rtUpload(artifactoryServer: server, json: warmUpJson)
     
-    def resolveJson = readFile 'workspace@script/resolve.json' 
+    def resolveJson = readFile 'resolve.json' 
     def downloadArtifactsClouser = downloadArtifacts(server, buildInfo);
     downloadArtifactsClouser(resolveJson)
     
     
-    def deployJson = readFile 'workspace@script/deploy.json' 
+    def deployJson = readFile 'deploy.json' 
     def uploadArtifactsClouser = uploadArtifacts(server, buildInfo)
     uploadArtifactsClouser(deployJson)
     
