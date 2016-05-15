@@ -5,6 +5,6 @@ node {
     def buildInfo = server.upload(warmUpJson)
     def resolveJson = readFile 'resolve.json' 
     def b2 = server.download(resolveJson)
-    buildInfo.merge(b2);
+    buildInfo.append(b2);
     server.publishBuildInfo(buildInfo)
 }
