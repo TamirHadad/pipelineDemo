@@ -7,13 +7,13 @@ node {
     def filePathPrefix = 'placeholder-example' + separator
     // get server from Artifactory global variable
     def server = Artifactory.server('Test')
-    def warmUpJson = readFile 'upload.json'
+    def warmUpJson = readFile(filePathPrefix + 'upload.json')
     withEnv(['SayMyName=heisenberg']) {
         // the buildInfo will contains the environment variables in this scope
         buildInfo = server.upload(warmUpJson)
        
   }
-    def resolveJson = readFile 'download.json'
+    def resolveJson = readFile(filePathPrefix +'download.json')
     def b2 = server.download(resolveJson)
     // merge the buildInfo data
     buildInfo.append(b2);
