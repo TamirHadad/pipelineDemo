@@ -1,0 +1,20 @@
+node {
+    //git url: 'https://github.com/TamirHadad/pipelineDemo.git'
+    
+    // get server from Artifactory global variable
+    def server = Artifactory.server('Test')
+
+    // The upload file contains pattern for two artifacts
+    // and set properties for one of them.
+    def uploadJson = readFile 'upload.json'
+    def buildInfo = server.upload(uploadJson)
+
+    // The download file contains pattern for downloading only the artifacts
+    // with the props p1=v1
+    def resolveJson = readFile 'download.json'
+    def b2 = server.download(resolveJson)
+    // merge the buildInfo data
+    buildInfo.append(b2);
+    // publish buildInfo to artifactory
+    server.publishBuildInfo(buildInfo)
+}
