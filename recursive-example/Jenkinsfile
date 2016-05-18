@@ -1,20 +1,18 @@
 node {
     git url: 'https://github.com/TamirHadad/pipelineDemo.git'
-    def separator = '\\'
-
-    def filePathPrefix = 'recursive-example' + separator
+    def filePathPrefix = 'recursive-example/'
     // get server from Artifactory global variable
-    def server = Artifactory.server('Test')
+    def server = Artifactory.server 'Test'
 
     // The upload file contains pattern for uploading artifacts and keep their file structure path by setting recursive=true
-    def uploadJson = readFile(filePathPrefix + 'upload.json')
-    def buildInfo = server.upload(uploadJson)
+    def uploadJson = readFile "${filePathPrefix}upload.json"
+    def buildInfo = server.upload uploadJson
     
     // The download file contains pattern for downloading artifacts to the root directory by setting recursive=false
-    def resolveJson = readFile(filePathPrefix + 'download.json')
-    def b2 = server.download(resolveJson)
+    def resolveJson = readFile "${filePathPrefix}download.json"
+    def b2 = server.download resolveJson
     // merge the buildInfo data
-    buildInfo.append(b2);
+    buildInfo.append b2
     // publish buildInfo to artifactory
-    server.publishBuildInfo(buildInfo)
+    server.publishBuildInfo buildInfo
 }
