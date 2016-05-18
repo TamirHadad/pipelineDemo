@@ -1,8 +1,0 @@
-{
-  "files": [
-    {
-      "pattern": "Artifactory*.zip",
-      "target": "libs-snapshot-local/"
-    }
-  ]
-}
