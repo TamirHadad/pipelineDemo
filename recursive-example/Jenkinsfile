@@ -13,7 +13,7 @@ node {
     def buildInfo = server.upload(uploadJson)
     
     // The download file contains pattern for downloading artifacts to the root directory by setting recursive=false
-    def resolveJson = readFile 'download.json'
+    def resolveJson = readFile (filePathPrefix + 'download.json')
     def b2 = server.download(resolveJson)
     // merge the buildInfo data
     buildInfo.append(b2);
