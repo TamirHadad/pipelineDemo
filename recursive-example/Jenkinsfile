@@ -1,11 +1,15 @@
 node {
-    //git url: 'https://github.com/TamirHadad/pipelineDemo.git'
-    
+    git url: 'https://github.com/TamirHadad/pipelineDemo.git'
+    def separator = '/'
+    if (System.properties['os.name'].toLowerCase().contains('windows')) {
+        separator = '\\'
+    }
+    def filePathPrefix = 'recursive-example' + separator
     // get server from Artifactory global variable
     def server = Artifactory.server('Test')
 
     // The upload file contains pattern for uploading artifacts and keep their file structure path by setting recursive=true
-    def uploadJson = readFile 'upload.json'
+    def uploadJson = readFile (filePathPrefix + 'upload.json')
     def buildInfo = server.upload(uploadJson)
     
     // The download file contains pattern for downloading artifacts to the root directory by setting recursive=false
