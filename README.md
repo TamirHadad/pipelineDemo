@@ -114,6 +114,8 @@ server.publishBuildInfo(buildInfo1)
 ```
 
 ## Artifacory JSON DSL
+For the [Jfrog-cli](https://www.jfrog.com/confluence/display/RTF/JFrog+CLI) users the DSL might look familiar.
+
 ### Schema
 #### Download/Upload
 
@@ -131,7 +133,7 @@ server.publishBuildInfo(buildInfo1)
 }
 ```
 
-##### For download you can also use aql instead of pattern
+##### For download you can also use [aql](https://www.jfrog.com/confluence/display/RTF/Artifactory+Query+Language) instead of pattern
 
 ```
 {
