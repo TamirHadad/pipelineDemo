@@ -35,11 +35,13 @@ There are two ways to use the Artifactory integration from a Pipeline flow:
 
 ### Using the Pipeline Git integration
 * Go to ‘Manage Jenkins’ → ‘Configure System’ → ‘Artifactory’ section, and make sure you have your Artifactory server/s configured
-* Set the ‘server id’ of the Artifactory server you want to use for testing to be ‘Test’ and then click ‘Save’
+* Go to ‘Manage Jenkins’ → ‘Configure System’ → ‘Artifactory’ section, and make sure you have your Artifactory server/s configured
+* Be sure to set the ‘server id’ for the Artifactory server/s, we’ll use that later from the Pipeline to identify the server/s we work with
 * Create a new Pipeline item
 * In the ‘Pipeline’ section, in the ‘Definition’ field, select the ‘Pipeline script from SCM’ option, and then in the ‘SCM’ field, select the ‘Git’ option
 * Copy the link to this GitHub repository and paste it to the ‘Repository URL’ field
 * In the ‘Script Path’ field, put the path to the script file of the example you wish to run in the following format: <EXAMPLE-NAME>/Jenkinsfile. For example: setting the value to  ‘props-example/Jenkinsfile’ would run the script in the props-example folder and use the json files in the same folder (see Artifactory DSL chapter for more details)
+* Add a parameter by checking the 'This build is parameterized' option, and then adding a text parameter called 'SERVER_ID' with the value of the server id you configured in the global Artifactory configuration  
 * Save and build the Pipeline flow
 
 ### Using a regular Pipeline script
@@ -47,7 +49,8 @@ There are two ways to use the Artifactory integration from a Pipeline flow:
 * Be sure to set the ‘server id’ for the Artifactory server/s, we’ll use that later from the Pipeline to identify the server/s we work with
 * Create a new Pipeline item
 * Copy the contents of the Jenkinsfile from the folder of the example you want to run into the ‘Script’ field
-* In the script, you’ll have to update the following:
+* Add a parameter by checking the 'This build is parameterized' option, and then adding a text parameter called 'SERVER_ID' with the value of the server id you configured in the global Artifactory configuration  
+* Save and build the Pipeline flow
 
 ## Artifactory pipeline plugin DSL
 
