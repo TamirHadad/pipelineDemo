@@ -8,13 +8,13 @@ node {
     def uploadJson = readFile "${filePathPrefix}upload.json"
     withEnv(['SayMyName=heisenberg']) {
         // the buildInfo will contains the environment variables in this scope
-        buildInfo = server.upload uploadJson
+        buildInfo1 = server.upload uploadJson
 
   }
     def resolveJson = readFile "${filePathPrefix}download.json"
-    def b2 = server.download resolveJson
+    def buildInfo2 = server.download resolveJson
     // merge the buildInfo data
-    buildInfo.append b2
+    buildInfo1.append buildInfo2
     // publish buildInfo to artifactory
-    server.publishBuildInfo buildInfo
+    server.publishBuildInfo buildInfo1
 }
