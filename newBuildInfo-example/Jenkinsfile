@@ -1,5 +1,5 @@
 node {
-    def filePathPrefix = 'newBuildIngo-example/'
+    def filePathPrefix = 'newBuildInfo-example/'
     // get server from Artifactory global variable
     def server = Artifactory.server SERVER_ID
 
