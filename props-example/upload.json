@@ -1,12 +1,12 @@
 {
   "files": [
     {
-      "pattern": "ArtifactoryPipeline.zip",
+      "pattern": "files/ArtifactoryPipeline.zip",
       "target": "libs-snapshot-local/",
       "props": "p1=v1"
     },
     {
-      "pattern": "ArtifactoryPipelineNoProps.zip",
+      "pattern": "files/ArtifactoryPipelineNoProps.zip",
       "target": "libs-snapshot-local/"
     }
   ]
