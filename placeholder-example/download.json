@@ -2,7 +2,7 @@
  "files": [
   {
       "pattern": "libs-snapshot-local/*(Pipeline).zip",
-      "target": "Bazinga/{1}/Gal{1}"
+      "target": "Bazinga/{1}/"
     }
  ]
 }
