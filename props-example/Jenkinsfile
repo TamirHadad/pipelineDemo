@@ -2,7 +2,7 @@ node {
     git url: 'https://github.com/TamirHadad/pipelineDemo.git'
     def filePathPrefix = 'props-example/'
     // get server from Artifactory global variable
-    def server = Artifactory.server 'Test'
+    def server = Artifactory.server ${SERVER_NAME}
 
     // The upload file contains pattern for two artifacts
     // and set properties for one of them.

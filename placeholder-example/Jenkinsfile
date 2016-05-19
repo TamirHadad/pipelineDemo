@@ -2,7 +2,7 @@ node {
     git url: 'https://github.com/TamirHadad/pipelineDemo.git'
     def filePathPrefix = 'placeholder-example/'
     // get server from Artifactory global variable
-    def server = Artifactory.server 'Test'
+    def server = Artifactory.server ${SERVER_NAME}
     def uploadJson = readFile "${filePathPrefix}upload.json"
     withEnv(['SayMyName=heisenberg']) {
         // the buildInfo will contains the environment variables in this scope
