@@ -15,6 +15,6 @@ node {
 
     // The download file contains pattern for downloading artifacts to the root directory by setting recursive=false
     def resolveJson = readFile "${filePathPrefix}download.json"
-   // server.download resolveJson, buildInfo
+    server.download resolveJson, buildInfo
     server.publishBuildInfo buildInfo
 }
