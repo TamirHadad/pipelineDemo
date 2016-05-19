@@ -1,4 +1,5 @@
 node {
+    git url: 'https://github.com/TamirHadad/pipelineDemo.git'
     def filePathPrefix = 'newBuildInfo-example/'
     // get server from Artifactory global variable
     def server = Artifactory.server SERVER_ID
