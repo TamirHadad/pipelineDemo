@@ -2,7 +2,7 @@ node {
     git url: 'https://github.com/TamirHadad/pipelineDemo.git'
     def filePathPrefix = 'recursive-example/'
     // get server from Artifactory global variable
-    def server = Artifactory.server ${SERVER_NAME}
+    def server = Artifactory.server ${SERVER_ID}
 
     // The upload file contains pattern for uploading artifacts and keep their file structure path by setting recursive=true
     def uploadJson = readFile "${filePathPrefix}upload.json"
