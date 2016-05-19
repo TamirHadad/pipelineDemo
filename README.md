@@ -130,3 +130,19 @@ server.publishBuildInfo(buildInfo1)
   ]
 }
 ```
+
+##### OR
+
+```
+{
+  "files": [
+    {
+      "aql": "[Mandatory]",
+      "target": "[Mandatory]",
+      "recursive": "[Optional]",
+      "flat" : "[Optional]",
+      "props": "[Optional]"
+    }
+  ]
+}
+```
