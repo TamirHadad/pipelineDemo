@@ -1,8 +1,8 @@
 {
   "files": [
     {
-      "pattern": "files/*Artifactory*.zip",
-      "target": "libs-snapshot-local/",
+      "pattern": "files/*Artifactory(*).zip",
+      "target": "libs-snapshot-local/Gal{1}",
       "recursive": "false"
     },
     {
