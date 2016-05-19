@@ -131,7 +131,7 @@ server.publishBuildInfo(buildInfo1)
 }
 ```
 
-##### OR
+##### For download you can also use aql instead of pattern
 
 ```
 {
