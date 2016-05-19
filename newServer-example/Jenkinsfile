@@ -1,6 +1,6 @@
 node {
     // git url: 'https://github.com/TamirHadad/pipelineDemo.git'
-    def filePathPrefix = 'placeholder-example/'
+    def filePathPrefix = 'newServer-example/'
     // new server with variables from jenkins
     def server = Artifactory.newServer ART_URL, ART_USERNAME,ART_PASSWORD 
     def uploadJson = readFile "${filePathPrefix}upload.json"
