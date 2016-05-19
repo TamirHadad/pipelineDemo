@@ -12,7 +12,7 @@ Please notice that this is a snapshot version for selected customers and not an 
 This plugin adds a new global variable called Artifactory to Pipeline scripts.<br>
 The Artifactory variable can be used to define Server object/s.<br>
 Each server object represents a single Artifactory server instance and can be used to perform actions against this server instance.<br>
-The actions that are currently available are: download, upload and publishBuildInfo.
+The actions that are currently available are: download, upload and publishBuildInfo.<br>
 If you are already familiar with the plugin, you can jump to [running a code sample](#running-a-code-sample).
 
 ## Installing the plugin
