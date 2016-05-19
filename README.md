@@ -35,7 +35,6 @@ There are two ways to use the Artifactory integration from a Pipeline flow:
 
 ### Using the Pipeline Git integration
 * Go to ‘Manage Jenkins’ → ‘Configure System’ → ‘Artifactory’ section, and make sure you have your Artifactory server/s configured
-* Go to ‘Manage Jenkins’ → ‘Configure System’ → ‘Artifactory’ section, and make sure you have your Artifactory server/s configured
 * Be sure to set the ‘server id’ for the Artifactory server/s, we’ll use that later from the Pipeline to identify the server/s we work with
 * Create a new Pipeline item
 * In the ‘Pipeline’ section, in the ‘Definition’ field, select the ‘Pipeline script from SCM’ option, and then in the ‘SCM’ field, select the ‘Git’ option
