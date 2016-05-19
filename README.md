@@ -1,26 +1,26 @@
 # Artifactory Jenkins Plugin Snapshot - Pipeline Support
 
 ## Introduction
-In contrast to freestyle jobs, pipelines enable you to define the whole application lifecycle. 
-A pipeline is a Groovy script that tells Jenkins what to do when your Pipeline is run.
-For more details on Pipeline, check out the [Pipeline tutorial](https://github.com/jenkinsci/pipeline-plugin/blob/master/TUTORIAL.md) on GitHub or the [Getting started with Pipeline](https://jenkins.io/doc/pipeline/) documentation.
-The [Artifactory Jenkins Plugin](https://github.com/JFrogDev/jenkins-artifactory-plugin) now provides a limited support to Pipelines. This means that you can now perform Artifactory-related actions like downloading and uploading artifacts at any stage of your Pipeline flow and have a better and more flexible CD workflow.
-This support will increasingly improve and allow more Artifactory actions from Pipelines and a better integration between Jenkins and the JFrog platform.
+In contrast to freestyle jobs, pipelines enable you to define the whole application lifecycle. <br>
+A pipeline is a Groovy script that tells Jenkins what to do when your Pipeline is run.<br>
+For more details on Pipeline, check out the [Pipeline tutorial](https://github.com/jenkinsci/pipeline-plugin/blob/master/TUTORIAL.md) on GitHub or the [Getting started with Pipeline](https://jenkins.io/doc/pipeline/) documentation.<br>
+The [Artifactory Jenkins Plugin](https://github.com/JFrogDev/jenkins-artifactory-plugin) now provides a limited support to Pipelines. This means that you can now perform Artifactory-related actions like downloading and uploading artifacts at any stage of your Pipeline flow and have a better and more flexible CD workflow.<br>
+This support will increasingly improve and allow more Artifactory actions from Pipelines and a better integration between Jenkins and the JFrog platform.<br>
 Please notice that this is a snapshot version for selected customers and not an official one.
 
 ## Overview
-This plugin adds a new global variable called Artifactory to Pipeline scripts.
-The Artifactory variable can be used to define Server object/s.
-Each server object represents a single Artifactory server instance and can be used to perform actions against this server instance.
+This plugin adds a new global variable called Artifactory to Pipeline scripts.<br>
+The Artifactory variable can be used to define Server object/s.<br>
+Each server object represents a single Artifactory server instance and can be used to perform actions against this server instance.<br>
 The actions that are currently available are: download, upload and publishBuildInfo.
 
 ## Installing the plugin
-Note: This is a snapshot version. But stay tuned, we plan to release a beta version soon. 
+Note: This is a snapshot version. But stay tuned, we plan to release a beta version soon.<br><br> 
 
-Download (link) 
+Download (link) <br><br>
 
-Before you begin, ensure Pipeline is installed: navigate to Plugin Manager, install Pipeline and restart Jenkins.
-If you plan to use the plugin using the Pipeline Git integration, you need to ensure you have the Git plugin installed as well.
+Before you begin, ensure Pipeline is installed: navigate to Plugin Manager, install Pipeline and restart Jenkins.<br>
+If you plan to use the plugin using the Pipeline Git integration, you need to ensure you have the Git plugin installed as well.<br><br>
 
 To install the plugin, please do the following:
 * Download the plugin .hpi file from the link above
