@@ -1,7 +1,7 @@
 {
  "files": [
   {
-      "aql": "items.find({\"repo\": \"libs-snapshot-local\",\"$or\": [{\"$and\": [{\"path\": {\"$match\":\".\"},\"name\":{\"$match\":\"\u200B*Pipeline.zip\"}}]},{\"$and\": [{\"path\": {\"$match\":\"*\u200B\"},\"name\":{\"$match\":\"*Pipeline.zip\"}}]}]})",
+      "aql": "{\"repo\": \"libs-snapshot-local\",\"$or\": [{\"$and\": [{\"path\": {\"$match\":\".\"},\"name\":{\"$match\":\"\u200B*Pipeline.zip\"}}]},{\"$and\": [{\"path\": {\"$match\":\"*\u200B\"},\"name\":{\"$match\":\"*Pipeline.zip\"}}]}]}",
       "target": "Bazinga/{1}/"
     }
  ]
