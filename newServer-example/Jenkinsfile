@@ -1,0 +1,18 @@
+node {
+    // git url: 'https://github.com/TamirHadad/pipelineDemo.git'
+    def filePathPrefix = 'placeholder-example/'
+    // new server with variables from jenkins
+    def server = Artifactory.newServer ART_URL, ART_USERNAME,ART_PASSWORD 
+    def uploadJson = readFile "${filePathPrefix}upload.json"
+    withEnv(['SayMyName=heisenberg']) {
+        // the buildInfo will contains the environment variables in this scope
+        buildInfo = server.upload uploadJson
+
+  }
+    def resolveJson = readFile "${filePathPrefix}download.json"
+    def b2 = server.download resolveJson
+    // merge the buildInfo data
+    buildInfo.append b2
+    // publish buildInfo to artifactory
+    server.publishBuildInfo buildInfo
+}
