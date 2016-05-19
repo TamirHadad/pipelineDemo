@@ -151,3 +151,8 @@ There are two ways to use the Artifactory integration from a Pipeline flow:
 * Copy the contents of the Jenkinsfile from the folder of the example you want to run into the ‘Script’ field
 * Add a parameter by checking the 'This build is parameterized' option, and then adding a text parameter called 'SERVER_ID' with the value of the server id you configured in the global Artifactory configuration  
 * Save and build the Pipeline flow
+
+# License
+This client is available under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+
+(c) All rights reserved JFrog
