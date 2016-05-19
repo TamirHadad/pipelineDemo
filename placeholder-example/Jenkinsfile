@@ -4,7 +4,7 @@ node {
 
     // In case you want to use some Artifactory which is not pre-configure,
     // use Artifactory.newServer(String url, String userName, String password)
-    def server = Artifactory.newServer ART_URL, ART_USERNAME, ART_PASSWORD
+    def server = Artifactory.newServer ART_URL, ART_USER, ART_PASSWORD
     def uploadJson = readFile "${filePathPrefix}upload.json"
     withEnv(['SayMyName=heisenberg']) {
         // the buildInfo will contains the environment variables in this scope
